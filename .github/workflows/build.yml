@@ -23,5 +23,6 @@ jobs:
     uses: NivagL/Common.Tools/.github/workflows/BuildNuget.yml@main
     with:
       project: 'common.model'
-      version: ${{ jobs.set-version.outputs.build-version }}
+      version: ${{ needs.set-version.outputs['build-version'] }}
     secrets: inherit
+
