@@ -17,26 +17,16 @@ permissions:
   packages: write
 
 jobs:
-  build-model:
-    runs-on: ubuntu-latest
-    outputs:
-      version: ${{ steps.set-version.outputs.build-version }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  set-version:
+    uses: ${{ github.repository_owner }}/Common.Tools/.github/workflows/BuildVersion.yml@main
+    with:
+      major: ${{ env.major }}
+      minor: ${{ env.minor }}
 
-      - name: Set version
-        id: set-version
-        uses: NivagL/Common.Tools/.github/workflows/BuildVersion.yml@main
-        with:
-          major: ${{ env.major }}
-          minor: ${{ env.minor }}
-
-      - name: Build nuget package
-        uses: NivagL/Common.Tools/.github/workflows/BuildNuget.yml@main
-        with:
-          project: ${{ env.project }}
-          version: ${{ steps.set-version.outputs.build-version }}
-        env:
-          GH_PACKAGES: ${{ secrets.GH_PACKAGES }}
-
+  build-nuget-package:
+    needs: set-version
+    uses: ${{ github.repository_owner }}/Common.Tools/.github/workflows/BuildNuget.yml@main
+    with:
+      project: ${{ env.project }}
+      version: ${{ jobs.set-version.outputs.build-version }}
+    secrets: inherit
