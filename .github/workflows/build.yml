@@ -27,15 +27,16 @@ jobs:
 
       - name: Set version
         id: set-version
-        uses: Common.Tools/Pipeline/Build/BuildVersion.yml@main
+        uses: NivagL/Common.Tools/.github/workflows/BuildVersion.yml@main
         with:
           major: ${{ env.major }}
           minor: ${{ env.minor }}
 
       - name: Build nuget package
-        uses: Common.Tools/Pipeline/Build/BuildNuget.yml@main
+        uses: NivagL/Common.Tools/.github/workflows/BuildNuget.yml@main
         with:
           project: ${{ env.project }}
           version: ${{ steps.set-version.outputs.build-version }}
         env:
           GH_PACKAGES: ${{ secrets.GH_PACKAGES }}
+
