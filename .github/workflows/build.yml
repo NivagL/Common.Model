@@ -1,7 +1,7 @@
 name: Build Common Model
 
 env:
-  project: matoa.model  
+  project: common.model  
   major: 1
   minor: 0
 
