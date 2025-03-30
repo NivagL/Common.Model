@@ -18,14 +18,14 @@ permissions:
 
 jobs:
   set-version:
-    uses: ${{ github.repository_owner }}/Common.Tools/.github/workflows/BuildVersion.yml@main
+    uses: NivagL/Common.Tools/.github/workflows/BuildVersion.yml@main
     with:
       major: ${{ env.major }}
       minor: ${{ env.minor }}
 
   build-nuget-package:
     needs: set-version
-    uses: ${{ github.repository_owner }}/Common.Tools/.github/workflows/BuildNuget.yml@main
+    uses: NivagL/Common.Tools/.github/workflows/BuildNuget.yml@main
     with:
       project: ${{ env.project }}
       version: ${{ jobs.set-version.outputs.build-version }}
