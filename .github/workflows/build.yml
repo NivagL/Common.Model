@@ -1,4 +1,4 @@
-name: Build Common Model
+name: Build Model
 
 on:
   push:
@@ -21,6 +21,14 @@ jobs:
   build-nuget-package:
     needs: set-version
     uses: NivagL/Common.Tools/.github/workflows/build-model-nuget.yml@main
+    with:
+      project: 'common.model'
+      version: ${{ needs.set-version.outputs['build-version'] }}
+    secrets: inherit
+
+  build-npm-package:
+    needs: build-nuget-package
+    uses: NivagL/Common.Tools/.github/workflows/build-model-npm.yml@main
     with:
       project: 'common.model'
       version: ${{ needs.set-version.outputs['build-version'] }}
