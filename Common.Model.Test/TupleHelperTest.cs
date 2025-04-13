@@ -1,6 +1,4 @@
-﻿using Common.Model.Meta;
-
-namespace Common.Model.Test;
+﻿namespace Common.Model.Test;
 
 [TestClass]
 [TestCategory("Unit")]

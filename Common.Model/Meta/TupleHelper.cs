@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Common.Model.Meta;
+namespace Common.Model;
 
 public static class TupleHelper
 {

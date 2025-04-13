@@ -8,4 +8,13 @@
     <RepositoryUrl>https://github.com/NivagL/common.model</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="TypeGen" Version="5.0.1" />
+  </ItemGroup>
+
+  <Target Name="GenerateTypeModels" AfterTargets="Build">
+    <Exec Command="dotnet tool restore" />
+    <Exec Command="dotnet typegen generate -c tgconfig.$(Configuration).json --output-folder ..\npm\src" />
+  </Target>
+
 </Project>

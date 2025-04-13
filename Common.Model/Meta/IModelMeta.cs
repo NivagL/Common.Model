@@ -1,4 +1,4 @@
-﻿namespace Common.Model.Meta;
+﻿namespace Common.Model;
 
 public interface IModelMeta<TKey, TValue>
 {

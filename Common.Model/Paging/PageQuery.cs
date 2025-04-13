@@ -1,4 +1,4 @@
-﻿namespace Common.Model.Paging;
+﻿namespace Common.Model;
 
 public class PageQuery
 {
