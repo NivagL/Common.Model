@@ -1,6 +1,6 @@
 {
-  "name": "@NivagL/matoa.model",
-  "description": "TypeScript data models for the Matoa application",
+  "name": "@NivagL/common.model",
+  "description": "TypeScript common data model",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NivagL/matoa.model.git"
+    "url": "git+https://github.com/NivagL/common.model.git"
   },
   "keywords": [
-    "matoa",
+    "common",
     "model",
     "typescript"
   ],

@@ -23,7 +23,7 @@ const exportStatements = tsFiles.map(file => {
 }).join('\n');
 
 // Add header comment
-const fileContent = `// Generated barrel exports for Matoa models
+const fileContent = `// Generated barrel exports for common models
 // This file is auto-generated. Do not edit directly.
 
 ${exportStatements}
