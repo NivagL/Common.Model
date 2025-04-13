@@ -6,7 +6,9 @@
     "Date": "null",
     "string": "\"\"",
     "boolean": "false",
-    "type":  "null"
+    "type": "null",
+    "class": "null",
+    "nullable": "type | null"
   },
   "csNullableTranslation": "type | null"
 }
