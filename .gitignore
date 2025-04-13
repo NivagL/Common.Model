@@ -400,4 +400,3 @@ FodyWeavers.xsd
 *.sln.iml
 
 /npm/src
-/Common.Model/npm/src

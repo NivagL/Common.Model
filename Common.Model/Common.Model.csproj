@@ -12,9 +12,13 @@
     <PackageReference Include="TypeGen" Version="5.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <TypescriptFiles Include="$(TargetDir)Typescript\*.ts" />
+  </ItemGroup>
+
   <Target Name="GenerateTypeModels" AfterTargets="Build">
     <Exec Command="dotnet tool restore" />
-    <Exec Command="dotnet typegen generate -c tgconfig.$(Configuration).json --output-folder npm\src" />
+    <Exec Command="dotnet typegen generate -c tgconfig.$(Configuration).json --output-folder ..\npm\src" />
   </Target>
 
 </Project>

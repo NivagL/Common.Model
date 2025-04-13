@@ -1,0 +1,34 @@
+{
+  "name": "@NivagL/matoa.model",
+  "description": "TypeScript data models for the Matoa application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NivagL/matoa.model.git"
+  },
+  "keywords": [
+    "matoa",
+    "model",
+    "typescript"
+  ],
+  "author": "gavin.paul.langley@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NivagL/matoa.model/issues"
+  },
+  "homepage": "https://github.com/NivagL/matoa.model#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
