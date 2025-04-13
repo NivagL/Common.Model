@@ -16,9 +16,9 @@
     <TypescriptFiles Include="$(TargetDir)Typescript\*.ts" />
   </ItemGroup>
 
-  <Target Name="GenerateTypeScriptModels" AfterTargets="Build">
+  <Target Name="TypescriptGen" AfterTargets="Build">
     <Exec Command="dotnet tool restore" />
-    <Exec Command="dotnet typegen generate -c tgconfig.$(Configuration).json --output-folder ..\npm\src" />
+    <Exec Command="dotnet typegen generate -c tgconfig.$(Configuration).json --output-folder ../npm/src" />
   </Target>
 
 </Project>
