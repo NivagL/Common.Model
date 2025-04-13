@@ -27,7 +27,7 @@ jobs:
     secrets: inherit
 
   build-npm-package:
-    needs: build-nuget-package
+    needs: [set-version, build-nuget-package]
     uses: NivagL/Common.Tools/.github/workflows/build-model-npm.yml@main
     with:
       project: 'common.model'
