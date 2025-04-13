@@ -22,9 +22,9 @@
   "author": "gavin.paul.langley@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NivagL/matoa.model/issues"
+    "url": "https://github.com/NivagL/common.model/issues"
   },
-  "homepage": "https://github.com/NivagL/matoa.model#readme",
+  "homepage": "https://github.com/NivagL/common.model#readme",
   "devDependencies": {
     "typescript": "^5.3.3"
   },
