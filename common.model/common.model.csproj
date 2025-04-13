@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypescriptFiles Include="$(TargetDir)Typescript\*.ts" />
+    <TypescriptFiles Include="$(TargetDir)Typescript/*.ts" />
   </ItemGroup>
 
   <Target Name="TypescriptGen" AfterTargets="Build">
