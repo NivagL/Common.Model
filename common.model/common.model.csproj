@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="TypeGen" Version="5.0.1" />
+    <PackageReference Include="TypeGen" Version="6.0.2" />
   </ItemGroup>
 
   <ItemGroup>
