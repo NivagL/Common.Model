@@ -1,5 +1,5 @@
 {
-  "assemblies": [ "bin/debug/net8.0/common.model.dll" ],
+  "assemblies": [ "bin/Debug/net8.0/common.model.dll" ],
   "generationSpecs": [ "TypescriptExportSpec" ],
   "defaultValuesForTypes": {
     "number": "-1",
