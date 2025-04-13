@@ -1,5 +1,5 @@
 {
-  "name": "common.model",
+  "name": "@NivagL/common.model",
   "version": "1.0.0",
   "description": "TypeScript common data model",
   "main": "dist/index.js",
